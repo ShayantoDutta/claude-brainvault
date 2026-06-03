@@ -1,0 +1,17 @@
+# claude-brainvault repo .gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# No secrets in this repo
+.env
+*.key
+*.pem

@@ -1,0 +1,38 @@
+# Claude BrainVault — .gitignore
+# Use this if you ever put your vault folder on GitHub.
+# These paths contain personal context — do not commit them publicly.
+
+# Raw source material (conversation exports, uploaded docs)
+02_sources/
+
+# System internals (personal metadata, scores)
+_system/
+
+# Inbox (unprocessed drops)
+01_inbox/
+
+# Environment and credential files — never commit these
+.env
+*.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Claude config files (may contain API keys)
+.claude/settings.json
+.claude/settings.local.json
+.claude/.mcp.json
+.mcp.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,62 @@
+# [YOUR NAME]'s Brain — Claude Operating System
+
+## Loading Protocol
+1. Read this file. **Stop here** if the question is simple or unrelated to your tracked work.
+2. Check the Domain Router below. Identify which topic applies.
+3. Load **one Hub file** from `03_knowledge/`. Max two if the question crosses domains.
+4. Load a specific concept note only if the hub points to one and you need more detail.
+5. **Never** load all hubs at once. Context budget is strict.
+
+**Max initial context: 3,000 tokens (this file + 1 hub).**
+
+---
+
+## Domain Router
+
+| Keywords / Topic | Hub to load |
+|---|---|
+| [TOPIC_1_KEYWORDS] | [[Hub_[TOPIC_1]]] |
+| [TOPIC_2_KEYWORDS] | [[Hub_[TOPIC_2]]] |
+| [TOPIC_3_KEYWORDS] | [[Hub_[TOPIC_3]]] |
+
+*Add rows as your brain grows. One row per topic area.*
+
+---
+
+## Connectors
+
+| Tool | What Claude can do | Status |
+|---|---|---|
+| [CONNECTOR_1] | [what it reads/writes] | Connected |
+| [CONNECTOR_2] | [what it reads/writes] | Connected |
+
+*Remove this section if no connectors were set up.*
+
+---
+
+## Recommended Skills
+
+See `_system/recommended_skills.md` for the full list with descriptions.
+
+Quick reference:
+- [SKILL_1_COMMAND] — [one-line description]
+- [SKILL_2_COMMAND] — [one-line description]
+
+---
+
+## Structure
+
+| Folder | Purpose |
+|---|---|
+| `01_inbox/` | Drop new files here. Tell Claude "process my inbox" to add them to your brain. |
+| `03_knowledge/` | Hubs and concept notes — your active working knowledge. |
+| `06_archive/` | Old content, kept for reference. Don't load unless asked. |
+| `_system/` | Vault health, evolution log, skills registry. Load only for system commands. |
+
+---
+
+## Rules
+- Every hub: YAML frontmatter + at least one link to another hub
+- Max hub size: 700 words
+- All changes logged to `_system/evolution_log.tsv`
+- `_system/` is read-only unless running a system command
