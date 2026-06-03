@@ -288,7 +288,7 @@ Create the following file structure at their chosen path:
 
 **CLAUDE.md generation rules:**
 
-Generate a `CLAUDE.md` using the template at `templates/CLAUDE.md.template`. Fill in:
+Generate a `CLAUDE.md` using the template at `~/.claude/skills/claude-brainvault/templates/CLAUDE.md.template` (Windows: `$env:USERPROFILE\.claude\skills\claude-brainvault\templates\CLAUDE.md.template`). Fill in:
 - **Domain router table**: one row per detected topic → maps to correct Hub file
 - **Context budget**: `Max initial context: 3,000 tokens (this file + 1 hub)`
 - **Loading protocol**: read CLAUDE.md → identify domain → load one Hub → load specific concept only if needed. Never auto-load all hubs.
@@ -297,7 +297,7 @@ Generate a `CLAUDE.md` using the template at `templates/CLAUDE.md.template`. Fil
 
 **Hub file generation rules:**
 
-Use `templates/hub_template.md` as base. For each topic:
+Use `~/.claude/skills/claude-brainvault/templates/hub_template.md` as base (Windows: `$env:USERPROFILE\.claude\skills\claude-brainvault\templates\hub_template.md`). For each topic:
 - Populate with real content extracted in Phase 4 (projects, tools, goals, key context)
 - Add wiki-links `[[Hub_OtherTopic]]` wherever cross-connections were found in Phase 4
 - Keep each hub 400–700 words
@@ -323,11 +323,25 @@ Here's what I created:
 
 **One critical step — point Claude at your vault:**
 
-To activate your brain, Claude needs to know about it. Here's how:
+To activate your brain, Claude needs to know about it. Here's how depending on which Claude product you use:
 
-> In Claude Code: open your project settings and set the **project folder** to `[vault-path]`. Claude will automatically read your `CLAUDE.md` on every session.
->
-> In Claude.ai (web): you can paste your `CLAUDE.md` content into your **Custom Instructions** under Settings.
+**If you use Claude Code (the desktop or terminal app):**
+Open your terminal, navigate to your vault folder, and start Claude from there:
+```
+cd [vault-path]
+claude
+```
+Claude Code detects your `CLAUDE.md` automatically and loads your brain on every session.
+
+**If you use Claude.ai on the web (including Cowork):**
+1. Go to [claude.ai](https://claude.ai)
+2. Click **Projects** in the left sidebar
+3. Create a **New Project** (or open an existing one you want to use)
+4. Click **Project Settings** (or the gear icon)
+5. Paste the full contents of your `CLAUDE.md` file into the **Project Instructions** box
+6. Save — every chat inside that project now uses your brain vault
+
+**Not sure which one you have?** If you're typing commands like `/claude-brainvault`, you're on Claude Code. If you're on a website at claude.ai, use the web instructions above.
 
 ---
 
@@ -397,9 +411,9 @@ If they want **Caveman Lite or Full**: give install instructions:
 3. Claude reads, extracts, cross-links, and adds it to the right hub automatically
 
 **Where to get help:**
-- Type `/brain_status` to see how healthy your vault is
-- Type `/brain_evolve` to run a full vault improvement pass
-- Re-run this skill anytime to add new topics or connectors
+- Ask Claude: *"How complete is my brain vault?"* — Claude checks your hubs and tells you what's missing or thin
+- Ask Claude: *"Review my brain vault and suggest improvements"* — Claude proposes updates based on your recent work
+- Re-run `/claude-brainvault` anytime to add new topics, files, or connectors
 
 *Your brain is live. Claude now works with you — not against your session limits.*
 

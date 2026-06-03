@@ -14,7 +14,7 @@ Claude BrainVault gives Claude a personal notebook about you and your work. Inst
 
 **What you get:**
 - Hit session limits far less often
-- Faster, more focused answers  
+- Faster, more focused answers
 - Claude that actually knows your projects, tools, and context — without you repeating yourself every session
 
 ---
@@ -40,35 +40,32 @@ The skill walks you through **8 guided steps**:
 
 ## Install
 
-### What you need
-- [Claude Code](https://claude.ai/code) installed
-- 10–15 minutes
+Copy and run **one command** for your platform. That's it — skill is installed and ready.
 
-### Steps
-
-**1. Clone this repo:**
+### Mac / Linux
 ```bash
-git clone https://github.com/[your-username]/claude-brainvault.git
+git clone https://github.com/ShayantoDutta/claude-brainvault.git ~/.claude/skills/claude-brainvault
 ```
 
-**2. Copy the skill to Claude's skills folder:**
-
-Mac / Linux:
-```bash
-cp -r claude-brainvault ~/.claude/skills/claude-brainvault
-```
-
-Windows (PowerShell):
+### Windows (PowerShell)
 ```powershell
-Copy-Item -Recurse claude-brainvault "$env:USERPROFILE\.claude\skills\claude-brainvault"
+git clone https://github.com/ShayantoDutta/claude-brainvault.git "$env:USERPROFILE\.claude\skills\claude-brainvault"
 ```
 
-**3. Run the skill in any Claude Code session:**
+### Then run the skill
+Open any Claude Code session and type:
 ```
 /claude-brainvault
 ```
+Follow the guided setup from there.
 
-**4. Follow the guided setup.**
+---
+
+## Requirements
+
+- [Claude Code](https://claude.ai/code) **or** a Claude.ai account (web / Cowork)
+- Git installed ([download here](https://git-scm.com/downloads) if you don't have it)
+- 10–15 minutes
 
 ---
 
@@ -86,7 +83,7 @@ This skill handles your personal work context. A few important rules built into 
 
 ## Credits
 
-**Claude BrainVault** — built by [Sayan Dutta](https://linkedin.com/in/sayantodutta)
+**Claude BrainVault** — built by [Shayanto Dutta](https://www.linkedin.com/in/shayantodutta/)
 
 **Caveman** (optional output compression, bundled in Step 8) — built by [Julius Brussee](https://github.com/JuliusBrussee/caveman)
 Caveman is a standalone skill by Julius. Claude BrainVault optionally installs it during setup with full attribution. All credit to Julius for that piece.
@@ -101,4 +98,4 @@ MIT — use it, fork it, build on it.
 
 ## Questions or issues?
 
-Open an issue on this repo or reach out on LinkedIn.
+Open an issue on this repo or reach out on [LinkedIn](https://www.linkedin.com/in/shayantodutta/).
