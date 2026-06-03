@@ -38,6 +38,26 @@ The skill walks you through **8 guided steps**:
 
 ---
 
+## Which Claude model should I use?
+
+**For setup (running `/claude-brainvault`): use Sonnet 4.6**
+
+Setup involves reading your files, finding connections across documents, generating populated hub content, and following complex multi-step instructions. That needs a capable model.
+
+| Model | For setup? | Why |
+|---|---|---|
+| **Sonnet 4.6** | ✅ Recommended | Strong reasoning, follows complex instructions reliably, higher rate limits on Pro than Opus |
+| Haiku 4.5 | ⚠️ Not recommended | Struggles with multi-file analysis and complex rule-following — hub content will be shallow |
+| Opus 4.8 | ⚠️ Not recommended | Lower rate limits on Claude Pro — you could hit a limit *during* setup, which defeats the point |
+
+**After setup: Sonnet 4.6 for complex work, Haiku 4.5 for simple Q&A**
+
+Once your vault is built, Claude only loads ~3,000 tokens of context per session instead of your full history. At that point, Haiku handles quick lookups and simple questions just fine. Use Sonnet for anything that requires reasoning or generating content.
+
+**How to switch models in Claude Code:** Click the model selector at the top of your session before running `/claude-brainvault`.
+
+---
+
 ## Install
 
 Copy and run **one command** for your platform. That's it — skill is installed and ready.
