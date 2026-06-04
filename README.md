@@ -32,9 +32,24 @@ The skill walks you through **8 guided steps**:
 | 5. Confirm | Claude shows you what it found — you correct anything wrong |
 | 6. Marketplace | Claude shows you built-in skills, connectors, and plugins you might be missing |
 | 7. Build | Claude creates your personal vault with real, cross-linked content |
-| 8. Activate | Optional: install Caveman for shorter, direct Claude responses |
+| 8. Activate | Optional: install Caveman + open your vault in Obsidian to see it as a graph |
 
 **No coding required. Just answer the questions.**
+
+---
+
+## See your vault as a graph
+
+Your vault is plain-text notes connected by links — the exact format the free [Obsidian](https://obsidian.md) app reads. Open the folder in Obsidian and switch to **Graph View** to see your brain as a picture:
+
+- Every topic is a **dot**
+- Every connection between topics is a **line**
+- Related topics cluster together; lonely dots flag a gap to fill
+- Drop files into `01_inbox/`, process them, and watch the map grow
+
+The same links Claude follows to route context are the lines you see in the graph — so you're literally looking at *how Claude sees your knowledge*. Obsidian is just a viewer; Claude doesn't need it to use your vault.
+
+**To set it up:** download Obsidian → "Open folder as vault" → select your vault folder → click the Graph View icon.
 
 ---
 

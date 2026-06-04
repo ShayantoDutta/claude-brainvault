@@ -391,7 +391,34 @@ If they want **Caveman Lite or Full**: give install instructions:
 
 ---
 
-**Step 2 — Final confirmation:**
+**Step 2 — See your brain (optional, recommended):**
+
+---
+
+*"Want to actually SEE your brain — as a picture you can explore?"*
+
+Your vault is built to work with a free app called **Obsidian** (a note app that turns linked notes into a visual map). You don't need it for Claude to work — it's for you, to see and explore what you've built.
+
+Here's why it's worth two minutes:
+- Every topic shows up as a **dot**
+- Every connection between topics shows up as a **line**
+- You see your whole knowledge map at a glance — and watch it grow as you add more
+- Lonely dots with no lines = a topic that needs more detail or linking (a gap you can fix)
+
+**To set it up:**
+
+1. Download Obsidian (free) from [https://obsidian.md](https://obsidian.md)
+2. Open it and choose **"Open folder as vault"**
+3. Select your brain vault folder: `[path]`
+4. Click the **Graph View** icon in the left sidebar (the circle made of connected dots)
+
+That's it — your brain appears as a living map. Each time you drop files into `01_inbox/` and process them, new dots and lines appear.
+
+> Why this works: your vault is plain text notes connected by links — the exact format Obsidian reads. The same links Claude follows to route context are the lines you see in the graph. You're looking at *how Claude sees your knowledge.*
+
+---
+
+**Step 3 — Final confirmation:**
 
 ---
 
@@ -403,12 +430,14 @@ If they want **Caveman Lite or Full**: give install instructions:
 ✅ **Skills registered** — `_system/recommended_skills.md` for reference
 ✅ **Connectors noted** — `_system/connectors.md`
 [✅ **Caveman installed** — if they chose it]
+[✅ **Visual map ready** — open in Obsidian to see your brain as a graph]
 
 **How to grow your brain over time:**
 
 1. Drop new files, notes, or content into `01_inbox/`
 2. Tell Claude: *"process my inbox"*
 3. Claude reads, extracts, cross-links, and adds it to the right hub automatically
+4. Open Obsidian to watch your knowledge map grow with each addition
 
 **Where to get help:**
 - Ask Claude: *"How complete is my brain vault?"* — Claude checks your hubs and tells you what's missing or thin
